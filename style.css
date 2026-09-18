@@ -40,7 +40,6 @@ header h1{
 }
 
 header p{
-    font: calc(2px + 1.1vw) "times", Arial, Serif;
     color:#C9E2F7;
 }
 
@@ -92,9 +91,9 @@ main h3{
     margin-top: 3%;
 }
 
-main p{
+p{
     color: black;
-    font: calc(2px + 1.3vw) "times", Arial, Serif;
+    font: calc(2px + 1.4vw) "times", Arial, Serif;
     padding: 1%;
 }
 
@@ -137,8 +136,10 @@ main .disciplines-img{
     padding: 3%;
 }
 
-main .disciplines-img p{
-    font: calc(2px + 1.1vw) "times", Arial, Serif;
+
+ul li{
+    font: calc(2px + 1.4vw) "times", Arial, Serif;
+    text-align: left;
 }
 
 main iframe{
@@ -164,16 +165,16 @@ main #white-uni-text ul{
     text-align: left;
     padding-left: 8%;
 }
+/* 
+main #white-uni-img{
+    display: flex;
+    flex-direction: row;
+} */
 
 main #white-uni-img img{
     max-width: 30vw;
     max-height: 30vh;
-    /* padding: 2%; */
-}
-
-main #white-uni-img p{
-    font: calc(2px + 1.1vw) "times", Arial, Serif;
-    text-align: center;
+    object-fit: cover;
 }
 
 /* weapon specific gear */
@@ -209,7 +210,7 @@ main #white-uni-img p{
 .weapon-gear img{
     max-width: 20vw;
     display:block;
-    padding: 4%
+    padding: 4%;
 }
 
 
@@ -463,4 +464,41 @@ footer p, footer a{
     font: calc(2px + 1.1vw) "times", Arial, Serif;
     color:#C9E2F7;
     text-align: center;
+}
+
+
+/* when the window is shrunk or when on mobile */
+@media screen and (max-width: 750px){
+    /* disciplines page */
+    main .disciplines-info{
+        flex-direction: column;
+    }
+
+    main .disciplines-text{
+        width: 100%;
+    }
+
+    main .disciplines-img{
+        width: 100%;
+    }
+
+    /* gear page */
+    .weapon-gear{
+        flex-direction: column;
+    }
+
+    .weapon-gear .gear-text{
+        width: 100%;
+    }
+
+    .weapon-gear .gear-img{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .weapon-gear .gear-img p{
+        display: block;
+    }
+
 }
