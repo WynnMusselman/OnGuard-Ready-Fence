@@ -264,10 +264,32 @@ main #white-uni-img p{
     width: 80vw;
 }
 
+#disc-quiz{
+    /* padding: 0 2% 1% 2%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+}
+ 
+#disc-options{
+    width: 50%;
+}
+
+#gear-quiz{
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+}
+
  
 #quiz-h2{
     text-align: center;
-    padding-top: 3%;
+    padding: 2%;
 }
 
 #quiz-options{
@@ -309,30 +331,93 @@ main #white-uni-img p{
     max-width: 40vw;
 }
 
+#ans-reveal{
+    padding: 2%;
+    text-align: center;
+}
 
+
+/* ------ comments ------- */
+
+/* comments */
+#comment-area{
+    background-color: #C9E2F7;
+    width: 100%;
+    text-align: left;
+    padding: 2%;
+}
+
+#comment-content{
+    display: block;
+    margin: auto;
+    width: 80%;
+    
+}
+
+#comment-area h2{
+    font: bold calc(2px + 2.5vw) "times", Arial, Serif;
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+#comment-content h3{
+    font: bold calc(2px + 1.6vw) "times", Arial, Serif;
+    text-align: center;
+    padding-bottom: 2%;
+}
 
 /* user input */
-input{
+label{
+    font: italic calc(2px + 1.1vw) "times", Arial, Serif;
+    color: #23456C;
+    padding: 1%;
+}
+
+#nameInput{
     background-color: #E7ECEF;
     border: 2px solid #6096BA;
     color: #292928;
     font: calc(2px + 1.3vw) "times", Arial, Serif;
     width: 25%;
     padding: 1%;
+    margin-bottom: 2%;
 }
 
-input:focus{
+#nameInput:focus{
     outline: none;
     border: 2px solid #23456C;
 }
 
-input::placeholder{
+#nameInput::placeholder{
+    color: #6096BA;
+    font: italic calc(2px + 1.3vw) "times", Arial, Serif;
+}
+
+
+/* add comment */
+#commentInput{
+    background-color: #E7ECEF;
+    border: 2px solid #6096BA;
+    color: #292928;
+    font: calc(2px + 1.3vw) "times", Arial, Serif;
+    width: 90%;
+    height: 20vh;
+    padding: 1%;
+}
+
+
+#commentInput:focus{
+    outline: none;
+    border: 2px solid #23456C;
+}
+
+#commentInput::placeholder{
     color: #6096BA;
     font: italic calc(2px + 1.3vw) "times", Arial, Serif;
 }
 
 /* submit button */
-#submitName{
+#submitComment{
     background-color: #6096BA;
     color: #E7ECEF;
     border: none;
@@ -341,10 +426,31 @@ input::placeholder{
     padding: 1%;
 }
 
-#submitName:hover{
+#submitComment:hover{
     background-color: #416b87;
     color: #E7ECEF;
     transition-duration: 0.5s;
+}
+
+
+/* comment section */
+#commentSection{
+    background-color: #E7ECEF;
+    border: 2px solid #23456C;
+    font: calc(2px + 1.3vw) "times", Arial, Serif;
+    width: 90%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#commentSection th{
+    font: bold calc(2px + 1.3vw) "times", Arial, Serif;
+    color: #6096BA;
+    margin: 1%;
+}
+
+#commentSection td{
+    padding: 2% 0 2% 0;
 }
 
 /* footer */
@@ -356,4 +462,5 @@ footer{
 footer p, footer a{
     font: calc(2px + 1.1vw) "times", Arial, Serif;
     color:#C9E2F7;
+    text-align: center;
 }
