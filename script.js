@@ -150,6 +150,7 @@ function component(width, height, x, y){
 
 //the player moves on key presses
 window.addEventListener('keydown', (event) => {
+    
     switch (event.key) { 
         case "a": //retreat
             player.x -= 20;
