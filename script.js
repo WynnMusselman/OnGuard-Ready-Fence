@@ -150,36 +150,37 @@ function component(width, height, x, y){
 
 //the player moves on key presses
 window.addEventListener('keydown', (event) => {
-            switch (event.key) { 
-                case "a": //retreat
-                    player.x -= 20;
-                    if(currMove.innerHTML === "Lunge!" || currMove.innerHTML === "Advance Lunge!" || currMove.innerHTML === "Redouble!"){
-                        player.currentImage = fencerStand;
-                    }
-                    currMove.innerHTML = "Retreat!"
-                    break;
-                case "d": //advance
-                    player.x += 20;
-                    if(currMove.innerHTML === "Lunge!" || currMove.innerHTML === "Advance Lunge!" || currMove.innerHTML === "Redouble!"){
-                        player.currentImage = fencerStand;
-                    }
-                    currMove.innerHTML = "Advance!"
-                    break;
-                case "w": //lunge
-                    player.x += 70;
-                    if(currMove.innerHTML === "Lunge!" || currMove.innerHTML === "Advance Lunge!" || currMove.innerHTML === "Redouble!"){
-                        currMove.innerHTML = "Redouble!"
-                    }
-                    else if(currMove.innerHTML === "Advance!"){
-                        currMove.innerHTML = "Advance Lunge!"
-                    }
-                    else{
-                        currMove.innerHTML = "Lunge!"
-                    }
-                    player.currentImage = fencerLunge;
-                    break;
+    switch (event.key) { 
+        case "a": //retreat
+            player.x -= 20;
+            if(currMove.innerHTML === "Lunge!" || currMove.innerHTML === "Advance Lunge!" || currMove.innerHTML === "Redouble!"){
+                player.currentImage = fencerStand;
             }
-        });
+            currMove.innerHTML = "Retreat!"
+            break;
+        case "d": //advance
+            player.x += 20;
+            if(currMove.innerHTML === "Lunge!" || currMove.innerHTML === "Advance Lunge!" || currMove.innerHTML === "Redouble!"){
+                player.currentImage = fencerStand;
+            }
+            currMove.innerHTML = "Advance!"
+            break;
+        case "w": //lunge
+            player.x += 70;
+            if(currMove.innerHTML === "Lunge!" || currMove.innerHTML === "Advance Lunge!" || currMove.innerHTML === "Redouble!"){
+                currMove.innerHTML = "Redouble!"
+            }
+            else if(currMove.innerHTML === "Advance!"){
+                currMove.innerHTML = "Advance Lunge!"
+            }
+            else{
+                currMove.innerHTML = "Lunge!"
+            }
+            player.currentImage = fencerLunge;
+            break;
+        }
+    }
+);
 
 function retreatBtn(){
     player.x -= 20;

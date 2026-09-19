@@ -543,4 +543,9 @@ footer p, footer a{
         display: inline-block;
        
     }
+
+    /* game */
+    #mobile-btns button{
+        display: inline;
+    }
 }
