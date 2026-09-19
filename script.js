@@ -221,8 +221,8 @@ function updateGameArea(){
 
 window.onload = function () {
     loadComments();
-    quizResults();
-    updateQuizBars(); 
-    startGame(); 
+    if (gameArea.canvas) {  
+        startGame();
+    }
 };
 
