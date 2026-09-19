@@ -58,57 +58,55 @@ function clearComments() {
 // -----------------------QUIZZES-------------------------------
 
 // techniques quiz
-let ans = document.getElementById("ans-reveal");
+let tech_ans = document.getElementById("ans-reveal");
 
 
 // techniques quiz
 function wrongAnsTech(){
-    ans.innerHTML = "<h4><b>Incorrect: </b>Reread the section on parry 4";
-    ans.style.color = "#910707";
-
-    let results = JSON.parse(localStorage.getItem("discQuizResults"));
-    results["wrong"]++;
-
-    localStorage.setItem("techQuizResults", JSON.stringify(results));
-
-    updateQuizBars();
+    tech_ans.innerHTML = "<h4><b>Incorrect: </b>Reread the section on parry 4";
+    tech_ans.style.color = "#910707";
 }
 
 function rightAnsTech(){
-    ans.innerHTML = "<h4><b>Correct!</b></h4>";
-    ans.style.color = "#099e06";
+    tech_ans.innerHTML = "<h4><b>Correct!</b></h4>";
+    tech_ans.style.color = "#099e06";
+}
 
-    let results = JSON.parse(localStorage.getItem("discQuizResults"));
-    results["right"]++;
+// disciplines quiz
+let disc_ans = document.getElementById("ans-reveal");
 
-    localStorage.setItem("techQuizResults", JSON.stringify(results));
 
-    updateQuizBars();
+function wrongAnsDisc(){
+    disc_ans.innerHTML = "<h4><b>Incorrect: </b>Look at the lame worn by the fencers</h4>";
+    disc_ans.style.color = "#910707";
+}
+
+function rightAnsDisc(){
+    disc_ans.innerHTML = "<h4><b>Correct!</b></h4>";
+    disc_ans.style.color = "#099e06";
+}
+
+//gear quiz
+let gear_ans = document.getElementById("ans-reveal");
+
+function wrongAnsLameGear(){
+    gear_ans.innerHTML = "<h4><b>Incorrect: </b>Epee fencers do not wear lames because the whole body is already target area.</h4>";
+    gear_ans.style.color = "#910707";
+}
+
+function wrongAnsGloveGear(){
+    gear_ans.innerHTML = "<h4><b>Incorrect: </b>Gloves are only worn on the dominant hand in fencing.</h4>";
+    gear_ans.style.color = "#910707";
+}
+
+function rightAnsGear(){
+    gear_ans.innerHTML = "<h4><b>Correct!</b></h4>";
+    gear_ans.style.color = "#099e06";
 }
 
 
-function updateQuizBars() {
-    let results = JSON.parse(localStorage.getItem("techQuizResults"));
-    let total = results.right + results.wrong;
+// ------------------------GAME---------------------------------------
 
-    // Prevent divide-by-zero when no one has answered yet
-    if (total === 0) {
-        document.getElementById("right-results").value = 0;
-        document.getElementById("wrong-results").value = 0;
-        return;
-    }
-    let wrongVal = (results.wrong / total) * 100;
-    let rightVal = (results.right / total) * 100;
-    document.getElementById("percentWrongTech").innerHTML = String(Math.round(wrongVal)) + "%";
-    document.getElementById("percentRightTech").innerHTML = String(Math.round(rightVal)) + "%";
-
-
-    document.getElementById("wrong-results").value = wrongVal;
-    document.getElementById("right-results").value = rightVal;
-}
-
-
-// fencing game
 const fencerStand = document.getElementById("fencer-stand");
 const fencerLunge = document.getElementById("fencer-lunge");
 let currMove = document.getElementById("curr-move");
