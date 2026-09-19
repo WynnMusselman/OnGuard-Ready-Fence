@@ -1,5 +1,4 @@
-**Ready?**
-**On Guard...**
+**On Guard... Ready?**
 # Fence!
 
 Learn how to fencing using [my website](https://ready-on-gaurd-fence.vercel.app/index.html)!
