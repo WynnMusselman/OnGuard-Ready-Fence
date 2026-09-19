@@ -293,7 +293,7 @@ main #white-uni-img img{
     padding: 2%;
 }
 
-#quiz-options{
+.quiz-options{
     width: 40%;
 }
 
@@ -302,15 +302,15 @@ main #white-uni-img img{
     padding-left: 7%;
 }
 
-#quiz-options h3{
+.quiz-options h3{
     font: calc(2px + 1.3vw) "times", Arial, Serif;
 }
 
-#quiz-options p{
+.quiz-options p{
     font: italic calc(2px + 1.1vw) "times", Arial, Serif;
 }
 
-#quiz-options button{
+.quiz-options button{
     font: calc(2px + 1.1vw) "times", Arial, Serif;
     display: block;
     margin: 5% auto;
@@ -322,7 +322,7 @@ main #white-uni-img img{
     color: #23456C;
 }
 
-#quiz-options button:hover{
+.quiz-options button:hover{
     background-color: #99b7d1;
     transition-duration: 0.5s;
 }
@@ -495,10 +495,52 @@ footer p, footer a{
         width: 100%;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .weapon-gear .gear-img p{
-        display: block;
+        width: 100%;
+        text-align: center;
     }
 
+    /* quizzes */
+        
+    #tech-quiz{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #disc-quiz{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #gear-quiz{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+    #quiz-h2{
+        text-align: center;
+        padding: 2%;
+    }
+
+    .quiz-options{
+        width: 100%;
+        text-align: center;
+    }
+
+    #quiz-img{
+        width: 60%;
+        padding-left: 7%;
+    }
+
+    .quiz-options button{
+        width: 30%;
+        display: inline-block;
+       
+    }
 }

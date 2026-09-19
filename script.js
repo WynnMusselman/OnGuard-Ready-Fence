@@ -1,3 +1,4 @@
+// ----------COMMENTS----------------------
 
 // submit name
 function submitComment(){
@@ -53,25 +54,11 @@ function clearComments() {
 // uncomment to remove all comments
 //localStorage.removeItem("techComments");
 
-// quizzes
+
+// -----------------------QUIZZES-------------------------------
+
 // techniques quiz
 let ans = document.getElementById("ans-reveal");
-
-//creates the quiz results for techniques page
-function quizResults() {
-    let results = JSON.parse(localStorage.getItem("dQuizResults"));
-    
-    //if there are no results so far, the progress bars are 0%
-    if (!results) {
-        results = {
-            wrong: 0,
-            right: 0
-        };
-
-        // add the results to local storage
-        localStorage.setItem("techQuizResults", JSON.stringify(results));
-    }
-}
 
 
 // techniques quiz
